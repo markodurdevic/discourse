@@ -1,0 +1,41 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+# To work with us on translations, join this project:
+# https://www.transifex.com/projects/p/discourse-org/
+
+hr:
+  js:
+    poll:
+      voters:
+        one: "glasać"
+        few: "glasaći"
+        other: "glasaći"
+      total_votes:
+        one: "ukupno glasova"
+        few: "ukupno glasova"
+        other: "ukupno glasova"
+      average_rating: "Prosječna ocjena: <strong>%{average}</strong>."
+      cast-votes:
+        title: "Dajte svoj glas"
+        label: "Glasaj sada!"
+      show-results:
+        title: "Prikaži resultate anketa"
+        label: "Pokaži rezultate"
+      hide-results:
+        title: "Nazad na vaše glasove"
+        label: "Sakrij rezultate"
+      open:
+        title: "Otvori anketu"
+        label: "Otvori"
+        confirm: "Jeste li sigurni da želite otvoriti anketu?"
+      close:
+        title: "Zatvori anketu"
+        label: "Zatvori"
+        confirm: "Jeste li sigurni da želite zatvoriti anketu?"
+      ui_builder:
+        poll_type:
+          label: Tip
+        poll_result:
+          label: Rezultati

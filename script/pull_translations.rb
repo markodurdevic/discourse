@@ -4,7 +4,7 @@
 require 'bundler/inline'
 
 gemfile(true) do
-  gem 'translations-manager', git: 'https://github.com/discourse/translations-manager.git'
+  gem 'translations-manager', git: 'https://github.com/markodurdevic/translations-manager.git'
 end
 
 require 'translations_manager'

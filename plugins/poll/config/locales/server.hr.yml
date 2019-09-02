@@ -1,0 +1,21 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+# To work with us on translations, join this project:
+# https://www.transifex.com/projects/p/discourse-org/
+
+hr:
+  site_settings:
+    poll_enabled: "Dozvoli ankete?"
+    poll_maximum_options: "Maksimalan broj opcija dozvoljenih u anketi."
+    poll_edit_window_mins: "Vrijeme nakon objave posta kada anketa može biti uređena."
+  poll:
+    multiple_polls_without_name: "Trenutno postoji više anketa bez imena. Koristite '<code>ime</code>' da identificirate svoju anketu."
+    default_poll_must_have_at_least_2_options: "Ankete moraju imati najmanje 2 moguće opcije."
+    named_poll_must_have_at_least_2_options: "Anketa <strong>%{name}</strong> mora imati najmanje 2 moguće opcije."
+    default_poll_must_have_different_options: "Anketa mora imati različite opcije."
+    named_poll_must_have_different_options: "Anketa <strong>%{name}</strong> mora imati različite opcije."
+    default_poll_with_multiple_choices_has_invalid_parameters: "Anketa sa više odabira sadrži nevažeće parametre."
+    named_poll_with_multiple_choices_has_invalid_parameters: "Anketa <strong>%{name}</strong> sa više odabira sadrži nevažeće parametre."
+    requires_at_least_1_valid_option: "Morate odabrati najmanje 1 važeću opciju."

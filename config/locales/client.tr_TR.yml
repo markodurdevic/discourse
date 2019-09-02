@@ -2678,6 +2678,11 @@ tr_TR:
       sort_by_name: "isim"
       manage_groups: "Etiket Grubunu Yönet"
       manage_groups_description: "Etiket grubunu yönetmek için grup tanımla"
+      upload: "Etiketleri Yükle"
+      upload_description: "Toplu olarak etiket oluşturmak için bir csv dosyası yükleyin"
+      upload_successful: "Etiketler başarıyla yüklendi"
+      delete_unused: "Kullanılmayan Etiketleri Sil"
+      delete_unused_description: "Hiçbir konuya veya kişisel mesaja eklenmeyen tüm etiketleri sil"
       cancel_delete_unused: "İptal"
       filters:
         without_category: "%{filter} %{tag} konular"
@@ -2690,6 +2695,7 @@ tr_TR:
           description: "Bu etiketi içeren tüm konuları otomatik olarak izleyeceksin. Tüm yeni mesajlar ve konulardan haberdar edileceksin, ayrıca konuların yanında okunmamış ve yeni mesajların sayısı da görünecek."
         watching_first_post:
           title: "İlk gönderi izlemesi"
+          description: "Bu etiketteki yeni konular size bildirilecektir ancak konulara cevap verilmeyecektir."
         tracking:
           title: "Takip ediliyor"
           description: "Bu etiketi içeren tüm konuları otomatik olarak takip edeceksin. Konunun yanında okunmamış ve yeni yayınların sayısı görünecek."
@@ -2704,6 +2710,7 @@ tr_TR:
         about: "Konuları kolayca yönetmek için onlara etiket ekle."
         new: "Yeni Grup"
         tags_label: "Bu gruptaki etiketler:"
+        tags_placeholder: "etiketler"
         parent_tag_label: "Üst etiket:"
         parent_tag_placeholder: "İsteğe Bağlı"
         parent_tag_description: "Bu gruptaki etiketler üst etiket olduğu sürece kullanılamaz."
@@ -2752,6 +2759,8 @@ tr_TR:
         title: "Mevcut raporlar listesi"
       dashboard:
         title: "Gösterge Paneli"
+        last_updated: "Kontrol paneli güncellendi:"
+        discourse_last_updated: "Discourse güncellendi:"
         version: "Sürüm"
         up_to_date: "Sistemin güncel durumda!"
         critical_available: "Önemli bir güncelleme var."
