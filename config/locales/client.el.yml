@@ -256,6 +256,8 @@ el:
       title:
         placeholder: "γράψε εδώ τον τίτλο του νήματος"
     review:
+      explain:
+        total: "Σύνολο"
       delete: "Σβήσιμο"
       settings:
         save_changes: "Αποθήκευση Αλλαγών"
@@ -1140,7 +1142,6 @@ el:
       title: "ειδοποιήσεις για αναφορές στο @name, απαντήσεις στις αναρτήσεις σου και στα νήματά σου, προσωπικά μηνύματα, κλπ."
       none: "Αυτή τη στιγμή δεν είναι δυνατόν να φορτωθούν οι ειδοποιήσεις."
       empty: "Δεν βρέθηκαν ειδοποιήσεις."
-      more: "εμφάνιση παλαιότερων ειδοποιήσεων"
       mentioned: "<span>{{username}}</span> {{description}}"
       group_mentioned: "<span>{{username}}</span> {{description}}"
       quoted: "<span>{{username}}</span> {{description}}"

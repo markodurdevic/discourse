@@ -312,6 +312,8 @@ da:
     review:
       order_by: "Filtrér efter"
       in_reply_to: "som svar til"
+      explain:
+        total: "Total"
       claim_help:
         optional: "Du kan gøre krav på dette punkt, for at forhindre andre i at gennemgå det."
         required: "Du skal kræve punkter, før du kan gennemgå dem."
@@ -1554,7 +1556,6 @@ da:
       title: "notifikationer ved @navns nævnelse, svar på dine indlæg og emner, beskeder, mv."
       none: "Ikke i stand til at indlæse notifikationer for tiden."
       empty: "Ingen notifikationer fundet."
-      more: "se ældre notifikationer"
       post_approved: "Dit indlæg blev godkendt"
       reviewable_items: "genstande, der kræver gennemgang"
       mentioned: "<span>{{username}}</span> {{description}}"

@@ -249,6 +249,8 @@ bg:
       title:
         placeholder: "Въведете заглавието на темата тук"
     review:
+      explain:
+        total: "Общо"
       delete: "Изтрий"
       settings:
         save_changes: "Запази промените"
@@ -1068,7 +1070,6 @@ bg:
       title: "уведомления за @name споменавания, отговори на вашите публикации и теми, лични съобщения, и т.н."
       none: "В момента не могат да бъдат заредени уведомленията."
       empty: "Няма намерени нотификации."
-      more: "виж стари известия"
       popup:
         mentioned: '{{username}} ви спомена в "{{topic}}" - {{site_title}}'
         group_mentioned: '{{username}} ви спомена в "{{topic}}" - {{site_title}}'

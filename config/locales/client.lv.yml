@@ -1151,7 +1151,6 @@ lv:
       title: "paziņojumi par @vārda pieminēšanu, atbildēm uz jūsu ierakstiem un tēmām, ziņām, utt."
       none: "Pašlaik neizdodas ielādēt paziņojumus."
       empty: "Nav atrasti paziņojumi."
-      more: "skatīt senākus paziņojumus"
       popup:
         mentioned: '{{username}} pieminēja jūs "{{topic}}" - {{site_title}}'
         group_mentioned: '{{username}} pieminēja jūs "{{topic}}" - {{site_title}}'

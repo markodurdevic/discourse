@@ -1301,7 +1301,6 @@ uk:
         create_topic:
           label: "Нова тема"
     notifications:
-      more: "переглянути старіші сповіщення"
       titles:
         watching_first_post: "нова тема"
     upload_selector:

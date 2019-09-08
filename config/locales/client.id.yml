@@ -244,6 +244,8 @@ id:
       title:
         placeholder: "tulis judul topik disini"
     review:
+      explain:
+        total: "Total"
       delete: "Hapus"
       settings:
         save_changes: "Simpan perubahan"
@@ -901,7 +903,6 @@ id:
           label: "Topik Baru"
     notifications:
       empty: "Tidak ada pemberitahuan."
-      more: "lihat notifikasi sebelumnya"
       titles:
         watching_first_post: "topik baru"
     upload_selector:

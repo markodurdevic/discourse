@@ -1239,7 +1239,6 @@ de:
     editing_grace_period_max_diff: "Maximale Anzahl von Zeichenänderungen, die während der Bearbeitungsfrist erlaubt sind. Bei größeren Änderungen wird eine neue Beitragsversion gespeichert (Vertrauensstufe 0 und 1)"
     editing_grace_period_max_diff_high_trust: "Maximale Anzahl von Zeichenänderungen, die während der Bearbeitungsfrist erlaubt sind. Bei größeren Änderungen wird eine neue Beitragsversion gespeichert (Vertrauensstufe 2 und höher)"
     staff_edit_locks_post: "Beiträge werden für die Bearbeitung gesperrt, wenn sie von Team-Mitgliedern bearbeitet werden"
-    post_edit_time_limit: "Autoren können ihre Beiträge für (n) Minuten nach dem Absenden bearbeiten. Auf 0 setzen um permanente Bearbeitung zu erlauben."
     edit_history_visible_to_public: "Erlaube jedem, vorherige Versionen eines bearbeiteten Beitrags zu sehen. Wenn deaktiviert sind diese nur für Team-Mitglieder sichtbar."
     delete_removed_posts_after: "Beiträge, die deren Verfasser selbst entfernt hat, werden nach (n) Stunden automatisch gelöscht. Die Beiträge werden sofort gelöscht, wenn dieser Wert auf 0 gesetzt wird."
     max_image_width: "Maximale Breite von Thumbnails von Bildern in einem Beitrag."

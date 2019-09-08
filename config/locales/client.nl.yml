@@ -95,6 +95,12 @@ nl:
         x_days:
           one: "%{count} dag geleden"
           other: "%{count} dagen geleden"
+        x_months:
+          one: "%{count} maand geleden"
+          other: "%{count} maanden geleden"
+        x_years:
+          one: "%{count} jaar geleden"
+          other: "%{count} jaar geleden"
       later:
         x_days:
           one: "%{count} dag later"
@@ -314,6 +320,26 @@ nl:
     review:
       order_by: "Sorteren op"
       in_reply_to: "in reactie op"
+      explain:
+        why: "leg uit waarom dit item in de wachtrij is beland"
+        title: "Beoordeelbare scores"
+        formula: "Formule"
+        subtotal: "Subtotaal"
+        total: "Totaal"
+        min_score_visibility: "Minimale score voor zichtbaarheid"
+        score_to_hide: "Score voor verbergen van bericht"
+        take_action_bonus:
+          name: 'heeft actie ondernomen'
+          title: 'Wanneer een staflid kiest voor het ondernemen van actie, wordt een bonus aan de markering gegeven.'
+        user_accuracy_bonus:
+          name: "gebruikersnauwkeurigheid"
+          title: "Gebruikers waarvan markeringen in het verleden zijn geaccordeerd ontvangen een bonus."
+        trust_level_bonus:
+          name: "vertrouwensniveau"
+          title: "Beoordeelbare items die door gebruikers met een hoger vertrouwensniveau zijn gemaakt hebben een hogere score."
+        type_bonus:
+          name: "type bonus"
+          title: "Aan bepaalde beoordeelbare typen kan door stafleden een bonus worden toegekend om ze hogere prioriteit te geven."
       claim_help:
         optional: "U kunt dit item opeisen om te voorkomen dat anderen het beoordelen."
         required: "U moet items opeisen voordat u ze kunt beoordelen."
@@ -1561,7 +1587,6 @@ nl:
       title: "meldingen van @naam-vermeldingen, antwoorden op uw berichten en topics, berichten, etc."
       none: "Meldingen kunnen momenteel niet worden geladen."
       empty: "Geen meldingen gevonden."
-      more: "oudere meldingen bekijken"
       post_approved: "Uw bericht is goedgekeurd"
       reviewable_items: "items die beoordeling nodig hebben"
       mentioned: "<span>{{username}}</span> {{description}}"
@@ -1719,6 +1744,7 @@ nl:
     go_back: "terug"
     not_logged_in_user: "gebruikerspagina met samenvatting van huidige activiteit en voorkeuren"
     current_user: "naar uw gebruikerspagina"
+    view_all: "alle bekijken"
     topics:
       new_messages_marker: "laatste bezoek"
       bulk:

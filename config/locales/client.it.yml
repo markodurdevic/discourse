@@ -311,6 +311,8 @@ it:
     review:
       order_by: "Ordina per"
       in_reply_to: "in risposta a"
+      explain:
+        total: "Totale"
       claim_help:
         optional: "Puoi rivendicare questo elemento per evitare che altri lo revisionino."
         required: "Per poter revisionare gli elementi devi prima rivendicarli."
@@ -1531,7 +1533,6 @@ it:
       title: "notifiche di menzioni @nome, risposte ai tuoi messaggi e argomenti ecc."
       none: "Impossibile caricare le notifiche al momento."
       empty: "Nessuna notifica trovata."
-      more: "visualizza le notifiche precedenti"
       post_approved: "Il tuo messaggio è stato approvato"
       reviewable_items: "elementi in attesa di revisione"
       mentioned: "<span>{{username}}</span> {{description}}"

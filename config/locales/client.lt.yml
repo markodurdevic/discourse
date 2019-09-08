@@ -328,6 +328,8 @@ lt:
     choose_message:
       none_found: "Žinučių nėra."
     review:
+      explain:
+        total: "Viso"
       delete: "Pašalinti"
       settings:
         save_changes: "Išsaugoti pakeitimus"
@@ -1248,7 +1250,6 @@ lt:
       title: "pranešimai kai paminimas @name , atsakomi tavo įrašai, temos, žinutės ir pan."
       none: "Šiuo metu neįmanoma pakrauti pranešimų."
       empty: "Pranešimų nėra"
-      more: "Žiūrėti senesnius pranešimus"
       mentioned: "<span>{{username}}</span> {{description}}"
       group_mentioned: "<span>{{username}}</span> {{description}}"
       quoted: "<span>{{username}}</span> {{description}}"

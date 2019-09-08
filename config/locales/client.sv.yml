@@ -270,6 +270,8 @@ sv:
         placeholder: "skriv ämnets rubrik här"
     review:
       in_reply_to: "som svar till"
+      explain:
+        total: "Totalt"
       delete: "Radera"
       settings:
         save_changes: "Spara ändringar"
@@ -1100,7 +1102,6 @@ sv:
       title: "notiser från @namn-omnämnanden, svar på dina inlägg och ämnen, meddelanden, etc"
       none: "Kan inte ladda notiser just nu."
       empty: "Inga notifieringar hittades."
-      more: "visa äldre notifikationer"
       granted_badge: "Förtjänade '{{description}}'"
       popup:
         mentioned: '{{username}} nämnde dig i "{{topic}}" - {{site_title}}'

@@ -925,7 +925,6 @@ sr:
     notifications:
       none: "Nemoguće je učitati notifikacije ovog trenutka."
       empty: "Nisu pronađene notifikacije"
-      more: "pogledaj starije notifikacije"
       titles:
         watching_first_post: "nova tema"
     upload_selector:

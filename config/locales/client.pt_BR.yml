@@ -312,6 +312,8 @@ pt_BR:
     review:
       order_by: "Ordenar por"
       in_reply_to: "Em resposta a"
+      explain:
+        total: "Total"
       claim_help:
         optional: "Você pode reivindicar este item para impedir que outras pessoas o revisem."
         required: "Você precisa reivindicar itens antes de poder revisá-los."
@@ -1556,7 +1558,6 @@ pt_BR:
       title: "notificações de menção de @nome, respostas às suas postagens, tópicos, mensagens, etc"
       none: "Não foi possível carregar notificações no momento."
       empty: "Nenhuma notificação foi encontrada."
-      more: "ver notificações antigas"
       post_approved: "Sua postagem foi aprovada"
       reviewable_items: "itens que exigem revisão"
       mentioned: "<span>{{username}}</span> {{description}}"

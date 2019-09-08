@@ -245,6 +245,8 @@ gl:
       title:
         placeholder: "escribe o título do tema aquí"
     review:
+      explain:
+        total: "Total"
       delete: "Eliminar"
       settings:
         save_changes: "Gardar os cambios"
@@ -912,7 +914,6 @@ gl:
     notifications:
       title: "notificacións das mencións ao teu @nome, respostas ás túas publicacións e temas, mensaxes, etc"
       none: "Non é posíbel cargar as notificacións neste intre"
-      more: "ver notificacións anteriores"
       popup:
         mentioned: '{{username}} mencionoute en "{{topic}}" - {{site_title}}'
         group_mentioned: '{{username}} mencionoute en "{{topic}}" - {{site_title}}'

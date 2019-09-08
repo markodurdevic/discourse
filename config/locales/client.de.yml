@@ -314,6 +314,8 @@ de:
     review:
       order_by: "beauftragt von"
       in_reply_to: "Antwort auf"
+      explain:
+        total: "Insgesamt"
       claim_help:
         optional: "Du kannst dieses Element reservieren, damit andere es nicht überprüfen."
         required: "Du musst Elemente reservieren, bevor du sie überprüfen kannst."
@@ -1559,7 +1561,6 @@ de:
       title: "Benachrichtigung über @Name-Erwähnungen, Antworten auf deine Beiträge und Themen, Nachrichten, usw."
       none: "Die Benachrichtigungen können derzeit nicht geladen werden."
       empty: "Keine Benachrichtigungen gefunden."
-      more: "ältere Benachrichtigungen anzeigen"
       post_approved: "Dein Beitrag wurde genehmigt."
       reviewable_items: "Elemente, die eine Überprüfung benötigen"
       mentioned: "<span>{{username}}</span> {{description}}"

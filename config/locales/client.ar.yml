@@ -354,6 +354,8 @@ ar:
       title:
         search: "ابحث في الرسائل باستخدام العنوان"
     review:
+      explain:
+        total: "مجموع"
       awaiting_approval: "بأنتضار موافقة"
       delete: "أحذف"
       settings:
@@ -1307,7 +1309,6 @@ ar:
       title: "إشعارات الإشارة إلى @اسمك، والردود على موضوعاتك و منشوراتك ، والرسائل، وغيرها"
       none: "تعذّر تحميل الإشعارات الآن."
       empty: "لا إشعارات."
-      more: "اعرض الإشعارات الأقدم من هذه"
       mentioned: "<span>{{username}}</span>{{description}}"
       group_mentioned: "<span>{{username}}</span>{{description}} "
       quoted: "<span>{{username}}</span>{{description}} "

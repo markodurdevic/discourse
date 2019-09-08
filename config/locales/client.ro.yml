@@ -306,6 +306,8 @@ ro:
       title:
         placeholder: "Scrieți aici titlul subiectului"
     review:
+      explain:
+        total: "Total"
       delete: "Șterge"
       settings:
         save_changes: "Salvează schimbările"
@@ -1258,7 +1260,6 @@ ro:
       title: "notificări la menționările @numelui tău, răspunsuri la postările sau subiectele tale, mesaje, etc."
       none: "Nu pot încărca notificările în acest moment."
       empty: "Nu au fost găsite notificări."
-      more: "vezi notificările mai vechi"
       mentioned: "<span>{{username}}</span> {{description}}"
       group_mentioned: "<span>{{username}}</span> {{description}}"
       quoted: "<span>{{username}}</span> {{description}}"

@@ -247,6 +247,8 @@ sq:
         placeholder: "shkruaj titullin e temës këtu"
     review:
       in_reply_to: "në përgjigje të"
+      explain:
+        total: "Total"
       delete: "Fshij"
       settings:
         save_changes: "Ruaj ndryshimet"
@@ -1043,7 +1045,6 @@ sq:
       title: "njoftimet për përmendjet @emri, përgjigjet ndaj postime dhe temave, mesazhet, etj."
       none: "Nuk i hapëm dot njoftimet."
       empty: "Nuk u gjet asnjë njoftim. "
-      more: "shiko njoftimet e kaluara"
       popup:
         mentioned: '{{username}} ju përmendi në "{{topic}}" - {{site_title}}'
         group_mentioned: '{{username}} ju përmendi në "{{topic}}" - {{site_title}}'

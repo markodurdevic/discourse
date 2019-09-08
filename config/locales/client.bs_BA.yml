@@ -1604,7 +1604,6 @@ bs_BA:
       title: "obaviještenja na spomenuto @ime, odgovori na vaše teme i postove, privatne poruke, itd"
       none: "Nemate obavijesti trenutno."
       empty: "Nema obavještenja."
-      more: "pogledaj starija obaviještenja"
       post_approved: "Vaš post je odobren"
       reviewable_items: "stvari koje zahtijevaju pregled"
       mentioned: "<span>{{username}}</span> {{description}}"

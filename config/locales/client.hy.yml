@@ -305,6 +305,8 @@ hy:
         search: "Փնտրել Հաղորդագրություն ըստ վերնագրի՝"
         placeholder: "գրեք հաղորդագրության վերնագիրն այստեղ"
     review:
+      explain:
+        total: "Ամբողջը"
       delete: "Ջնջել"
       settings:
         save_changes: "Պահպանել Փոփոխությունները"
@@ -1403,7 +1405,6 @@ hy:
       title: "@անունի հիշատակումների, Ձեր գրառումների և թեմաների պատասխանների, հաղորդագրությունների և այլնի մասին ծանուցումներ "
       none: "Սյս պահին հնարավոր չէ բեռնել ծանուցումները"
       empty: "Ծանուցումներ չեն գտնվել:"
-      more: "դիտել ավելի հին ծանուցումները"
       mentioned: "<span>{{username}}</span> {{description}}"
       group_mentioned: "<span>{{username}}</span> {{description}}"
       quoted: "<span>{{username}}</span> {{description}}"

@@ -280,6 +280,8 @@ sw:
       title:
         placeholder: "andika kichwa cha mada hapa"
     review:
+      explain:
+        total: "Jumla"
       delete: "Futa"
       settings:
         save_changes: "Hifadhi Mabadiliko"
@@ -1283,7 +1285,6 @@ sw:
       title: "taarifa za @jina lililotajwa, majibu ya machapisho na mada, ujumbe, na zingine"
       none: "Imeshindwa kupakia taarifa kwa mda huu."
       empty: "Hakuna taarifa zilizopatikana."
-      more: "angalia taarifa za mda zaidi"
       mentioned: "<span>{{jina la mtumiaji}} </span>{{maelezo}}"
       group_mentioned: "<span>{{jina la mtumiaji}} </span>{{maelezo}}"
       quoted: "<span>{{jina la mtumiaji}}</span> {{maelezo}}"

@@ -339,6 +339,8 @@ sk:
     choose_message:
       none_found: "Žiadne správy."
     review:
+      explain:
+        total: "Celkovo"
       delete: "Odstrániť"
       settings:
         save_changes: "Uložiť zmeny"
@@ -1285,7 +1287,6 @@ sk:
       title: "oznámenia o zmienkach pomocou @meno, odpovede na Vaše príspevky a témy, správy, atď."
       none: "Notifikácie sa nepodarilo načítať"
       empty: "Žiadne upozornenia sa nenašli."
-      more: "zobraziť staršie upozornenia"
       popup:
         mentioned: '{{username}} Vás zmienil v "{{topic}}" - {{site_title}}'
         group_mentioned: '{{username}} Vás zmienil v "{{topic}}" - {{site_title}}'

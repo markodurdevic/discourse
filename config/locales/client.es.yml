@@ -314,6 +314,23 @@ es:
     review:
       order_by: "Ordenar por"
       in_reply_to: "en respuesta a"
+      explain:
+        why: "explica por qué ha acabado en la cola"
+        title: "Puntuación de revisable"
+        formula: "Fórmula"
+        subtotal: "Subtotal"
+        total: "Total"
+        min_score_visibility: "Puntuación mínima para ser visible"
+        score_to_hide: "Puntuación mínima para ocultar publicación"
+        user_accuracy_bonus:
+          name: "precisión del usuario"
+          title: "Los usuarios con los que se ha coincidido en reportes anteriores reciben puntos extra."
+        trust_level_bonus:
+          name: "nivel de confianza"
+          title: "Los revisables creados por usuarios con niveles de confianza elevados reciben una puntuación más alta."
+        type_bonus:
+          name: "tipo de bonificación"
+          title: "Algunos tipos de revisables pueden recibir una bonificación por el staff para que tengan mayor prioridad."
       claim_help:
         optional: "Puedes reclamar este artículo para evitar que otros lo revisen."
         required: "Debes reclamar los artículos antes de poder revisarlos."
@@ -704,8 +721,8 @@ es:
         ignore_duration_username: "Nombre de usuario"
         ignore_duration_when: "Duración:"
         ignore_duration_save: "Ignorar"
-        ignore_duration_note: "Por favor ten en cuenta que todos los ignorados se eliminan automaticamente al expirar la duración especificada para esta acción."
-        ignore_duration_time_frame_required: "Por favor selecciona un intervalo de tiempo"
+        ignore_duration_note: "Por favor, ten en cuenta que todos los ignorados se eliminan automáticamente al expirar la duración especificada para esta acción."
+        ignore_duration_time_frame_required: "Por favor, selecciona un intervalo de tiempo"
         ignore_no_users: "No ignoras a ningún usuario"
         ignore_option: "Ignorado"
         ignore_option_title: "No recibirás notificaciones relacionadas con este usuario y todos sus temas y respuestas se ocultarán."
@@ -1561,7 +1578,6 @@ es:
       title: "notificaciones por menciones a tu @nombre, respuestas a tus publicaciones y temas, mensajes, etc"
       none: "No se pudieron cargar las notificaciones en este momento."
       empty: "No se encontraron notificaciones."
-      more: "ver notificaciones antiguas"
       post_approved: "Tu publicación ha sido aprobada"
       reviewable_items: "elementos que requieren revisión"
       mentioned: "<span>{{username}}</span> {{description}}"
@@ -1719,6 +1735,7 @@ es:
     go_back: "volver"
     not_logged_in_user: "página de usuario con resumen de la actividad y preferencias actuales"
     current_user: "ir a tu página de usuario"
+    view_all: "ver todo"
     topics:
       new_messages_marker: "última visita"
       bulk:
@@ -2844,8 +2861,8 @@ es:
       reports:
         title: "Lista de informes disponibles"
       dashboard:
-        title: "Panel"
-        last_updated: "Panel actualizado:"
+        title: "Dashboard"
+        last_updated: "Dashboard actualizado:"
         discourse_last_updated: "Discourse actualizado:"
         version: "Versión"
         up_to_date: "¡Estás actualizado!"
@@ -2963,6 +2980,7 @@ es:
               owners: "Propietarios del grupo"
               description: "Los administradores pueden ver todos los grupos."
             members_visibility_levels:
+              title: "¿Quién puede ver los miembros de este grupo?"
               description: "Los administradores pueden ver los miembros de todos los grupos."
             publish_read_state: "Publicar confirmaciones de lectura en los mensajes grupales"
           membership:
@@ -3071,7 +3089,7 @@ es:
           details: "Cuando un elemento nuevo está disponible para ser revisado y cuando su estado se actualiza."
         notification_event:
           name: "Evento de notificación"
-          details: "Cuando un usuario recibe una notificación"
+          details: "Cuando un usuario recibe una notificación."
         delivery_status:
           title: "Estado de entrega"
           inactive: "Inactivo"
@@ -3807,8 +3825,8 @@ es:
           one: "No se pueden eliminar todos los posts. Algunos tienen más de %{count} día de antigüedad. (Ver la opción delete_user_max_post_age )"
           other: "No se pueden eliminar todas las publicaciones. Algunas publicaciones tienen más de %{count} días de antigüedad. (Ver la opción delete_user_max_post_age)"
         cant_delete_all_too_many_posts:
-          one: "No se pueden eliminar todos los posts porque el usuario tiene más de %{count} post. (Ver la opción delete_all_posts_max)"
-          other: "No se pueden eliminar todas las publicaciones porque el usuario tiene más de %{count} publicaciones. (delete_all_posts_max)"
+          one: "No se pueden eliminar todos los posts porque el usuario tiene más de %{count}. (delete_all_posts_max)"
+          other: "No se pueden eliminar todas las publicaciones porque el usuario tiene más de %{count}. (delete_all_posts_max)"
         delete_confirm: "Por lo general es preferible anonimizar usuarios en vez de eliminarlos para evitar quitar contenido de debates existentes.<br><br>¿Estás SEGURO de que quieres eliminar este usuario? ¡Esta acción es permanente!"
         delete_and_block: "Eliminar y <b>bloquear</b> este correo electrónico y esta dirección IP"
         delete_dont_block: "Solo eliminar"
@@ -3976,7 +3994,7 @@ es:
           tags: "Etiquetas"
           search: "Búsqueda"
           groups: "Grupos"
-          dashboard: "Panel"
+          dashboard: "Dashboard"
         secret_list:
           invalid_input: "Los campos no pueden estar vacíos o contener el carácter de barra vertical."
       badges:

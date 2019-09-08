@@ -14,37 +14,95 @@ hr:
     formats:
       short: "%m-%d-%Y"
       short_no_year: "%B %-d"
+      date_only: "%B %Y %-d"
+      long: "%B %Y %H:%M %-d"
+      no_day: "%B %Y"
   date:
     month_names: [~, siječanj, veljača, ožujak, travanj, svibanj, lipanj, srpanj, kolovoz, rujan, listopad, studeni, prosinac]
     <<: *datetime_formats
   time:
     <<: *datetime_formats
+    am: "am"
     pm: "pp"
   title: "Discourse"
   topics: "Teme"
   posts: "objave"
   loading: "Učitavanje"
+  powered_by_html: 'Pogonjeno <a href="https://www.discourse.org">Discourse</a> platformom, preporučen pregled uz omogućen JavaScript'
   sign_up: "Učlani se"
   log_in: "Prijava"
   submit: "Pošalji"
   purge_reason: "Automatski izbrisao kao napušteni, deaktivirani račun."
   disable_remote_images_download_reason: "Daljinsko preuzimanje slika je onemogućeno jer nema dovoljno dostupnog prostora na disku."
+  anonymous: "Anonimno"
+  remove_posts_deleted_by_author: "Izbrisao autor"
+  redirect_warning: "Nismo mogli potvrditi da je poveznica koju ste odabrali stvarno bila objavljena na forumu. Želite li svejedno nastaviti, odaberite poveznicu u nastavku."
+  on_another_topic: "Na drugoj temi"
+  themes:
+    bad_color_scheme: "Tema se ne može ažurirati, nevažeća paleta boja"
+    other_error: "Dogodila se greška pri ažuriranju teme"
+    compile_error:
+      unrecognized_extension: "Nastavak datoteke %{extension} nije prepoznat"
+    import_error:
+      generic: Dogodila se greška prilikom učitavanja teme
+      about_json: "Greška pri uvozu: about.json ne postoji ili je nevažeći"
+      about_json_values: "about.json sadrži nevažeće vrijednosti: %{errors}"
+      git: "Greška pri kloniranju git repozitorija, pristup je odbijen ili repozitorij nije pronađen"
+      unpack_failed: "Greška pri otpakiravanju datoteke"
+      unknown_file_type: "Datoteka koju ste učitali ne čini se važećom Discourse temom."
+    errors:
+      component_no_user_selectable: "Komponente teme ne može birati korisnik"
+      component_no_default: "Komponente teme ne mogu biti podrazumijevana tema."
+      component_no_color_scheme: "Komponente teme ne mogu imati palete boja"
+      no_multilevels_components: "Teme s vezanim temama ne mogu same biti vezane teme."
+    settings_errors:
+      invalid_yaml: "Zadani YAML je nevažeći"
+      data_type_not_a_number: "Postavljanje `%{name}` tipa nije podržano. Podržani tipovi su `integer`, `bool`, `list` i `enum`"
+      name_too_long: "Postoji postavka s predugim imenom. Najveća dopuštena duljina je 255"
+      default_value_missing: "Postavka `%{name}` nema podrazumijevanu vrijednost."
+      default_not_match_type: "Tip zadane vrijednosti postavke `%{name}` ne podudara se s postavljenom vrijednošću postavke."
+      default_out_range: "Podrazumijevana vrijednost postavke `%{name}` nije u zadanom rasponu."
+      enum_value_not_valid: "Izabrana vrijednost nije jedna od izbora u enum nizu."
+      number_value_not_valid: "Nova vrijednost nije u dozvoljenom rasponu."
+      number_value_not_valid_min_max: "Mora biti između %{min} i %{max}."
+      number_value_not_valid_min: "Mora biti veće od ili jednako %{min}."
+      number_value_not_valid_max: "Mora biti manje od ili jednako %{max}."
+      string_value_not_valid: "Duljina nove vrijednosti nije u dozvoljenom rasponu."
+      string_value_not_valid_min_max: "Mora biti duga barem %{min} i najviše %{max} znakova."
+      string_value_not_valid_min: "Mora biti duga barem %{min} znakova."
+      string_value_not_valid_max: "Mora imati najviše %{max} znakova."
+    locale_errors:
+      invalid_yaml: "Nevažeći YAML s prijevodom."
   emails:
     incoming:
       default_subject: "Temi je nužno dodati naslov"
       show_trimmed_content: "Prikaži skraćeni sadržaj"
       no_subject: "(bez naslova)"
       no_body: "(bez tijela poruke)"
+      missing_attachment: "(Prilog %{filename} nije pronađen)"
+      errors:
+        empty_email_error: "Događa se kada je izvorno primljeni mail prazan."
+        no_message_id_error: "Događa se kada mail nema 'Message-Id' zaglavlje."
+        auto_generated_email_error: "Događa se kada je 'precedence' zaglavlje postavljeno na: 'list', 'junk', 'bulk' ili 'auto_reply', ili bilo koje drugo zaglavlje sadrži: 'auto-submitted', 'auto-replied' ili 'auto-generated'."
+        no_body_detected_error: "Događa se kada nismo mogli otpakirati tijelo poruke i nije bilo priloga poruke."
+        no_sender_detected_error: "Događa se kada važeća email adresa nije pronađena u 'From' zaglavlju."
+        inactive_user_error: "Događa se kada pošiljatelj nije aktivan."
+        silenced_user_error: "Događa se kada je pošiljatelj prigušen."
+        strangers_not_allowed_error: "Događa se kada korisnik pokuša započeti novu temu u kategoriji čiji nije član."
+        insufficient_trust_level_error: "Događa se kada korisnik pokuša započeti novu temu u kategoriji za koju nema potrebnu razinu povjerenja."
   errors: &errors
     format: "%{attribute} %{message}"
     messages:
       too_long_validation: "je ograničeno na %{max} znakova; vi ste unjeli %{length}."
+      invalid_boolean: "Nevažeća boolean vrijednost."
       taken: "je već zauzeto"
+      accepted: mora biti prihvaćena
       blank: ne može biti prazno
       present: mora biti prazno
       confirmation: "ne odgovara %{attribute}"
       empty: ne može biti prazno
       equal_to: "mora biti jednako %{count}"
+      even: mora biti parno
       exclusion: je rezervirano
       greater_than: "mora biti veće od %{count}"
       greater_than_or_equal_to: "mora biti veće ili jednako %{count}"
@@ -58,6 +116,7 @@ hr:
       not_a_number: nije broj
       not_an_integer: mora biti cijeli broj
       odd: mora biti neparan
+      max_emojis: "ne možete imati više od %{max_emojis_count} emojija"
       too_long:
         one: je predug (maksimalno %{count} znakova)
         few: su predugi (maksimalno %{count} znakova)
@@ -72,17 +131,27 @@ hr:
   activemodel:
     errors:
       <<: *errors
+  bulk_invite:
+    error: "Dogodila se greška pri učitavanju te datoteke. Molimo kasnije pokušajte ponovno."
   backup:
     operation_already_running: "Operacija je trenutno u toku. Trenutno ne možemo započeti novi posao."
     backup_file_should_be_tar_gz: "Sigurnosna kopija bi trebala biti .tar.gz arhiv."
     not_enough_space_on_disk: "Nema dovoljno prostora na disku za učitanje sigurnosne kopije."
+    location:
+      local: "Lokalno"
+      s3: "Amazon S3"
   not_logged_in: "Morate biti prijavljeni da to napravite."
   read_only_mode_enabled: "Ova je stranica u \"samo čitanje\" modelu. Interakcije nemoguće."
+  reading_time: "Vrijeme čitanja"
   likes: "Like-ova"
   too_many_replies:
     one: "Žao nam je ali novi korisnici su privremeno ograničeni na %{count} odgovora u istoj temi."
     few: "Žao nam je ali novi korisnici su privremeno ograničeni na %{count} odgovora u istoj temi."
     other: "Žao nam je ali novi korisnici su privremeno ograničeni na %{count} odgovora u istoj temi."
+  max_consecutive_replies:
+    one: "Nije dopušteno više odgovora za redom. Molimo uredite vaš prethodni odgovor ili pričekajte da vam netko drugi odgovori."
+    few: "Dopušteno je najviše %{count} odgovora za redom. Molimo uredite vaš prethodni odgovor ili pričekajte da vam netko drugi odgovori."
+    other: "Dopušteno je najviše %{count} odgovora za redom. Molimo uredite vaš prethodni odgovor ili pričekajte da vam netko drugi odgovori."
   embed:
     start_discussion: "Pokreni raspravu"
     continue: "Nastavi raspravu"
@@ -94,20 +163,56 @@ hr:
     permalink: "Poveznica"
     imported_from: "Ovo je prateća tema rasprave za originalni unos na %{link}"
     in_reply_to: "▶ %{username}"
+    replies:
+      one: "%{count} odgovor"
+      few: "%{count} odgovora"
+      other: "%{count} odgovora"
+    likes:
+      one: "%{count} like"
+      few: "%{count} likeova"
+      other: "%{count} likeova"
+    last_reply: "Posljednji odgovor"
     created: "Stvoreno"
   no_mentions_allowed: "Žao nam je, ne možete spominjati druge korisnike."
+  too_many_mentions:
+    one: "Žao nam je, možete spomenuti samo jednog korisnika u objavi."
+    few: "Žao nam je, možete spomenuti najviše %{count} korisnika u objavi."
+    other: "Žao nam je, možete spomenuti najviše %{count} korisnika u objavi."
   no_mentions_allowed_newuser: "Žao nam je, novi korisnici ne mogu spominjati druge korisnike."
+  too_many_mentions_newuser:
+    one: "Žao nam je, novi korisnici mogu spomenuti samo jednog korisnika u objavi."
+    few: "Žao nam je, novi korisnici mogu spomenuti samo %{count} korisnika u objavi."
+    other: "Žao nam je, novi korisnici mogu spomenuti samo %{count} korisnika u objavi."
+  no_images_allowed_trust: "Žao nam je, ne možete dodati slike u objavu."
   no_images_allowed: "Žao nam je, novi korisnici ne mogu stavljati slike u objave."
+  too_many_images:
+    one: "Žao nam je, novi korisnici mogu dodati samo jednu sliku u objavu."
+    few: "Žao nam je, novi korisnici mogu dodati najviše %{count} slika u objavu."
+    other: "Žao nam je, novi korisnici mogu dodati najviše %{count} slika u objavu."
   no_attachments_allowed: "Žao nam je novi korisnici ne mogu stavljati privitke u objave."
+  too_many_attachments:
+    one: "Žao nam je, novi korisnici mogu dodati samo jedan prilog u objavu."
+    few: "Žao nam je, novi korisnici mogu dodati najviše %{count} priloga u objavu."
+    other: "Žao nam je, novi korisnici mogu dodati najviše %{count} priloga u objavu."
   no_links_allowed: "Žao nam je. novi korisnici ne mogu stavljati poveznice."
+  links_require_trust: "Žao nam je, ne možete dodati poveznice u objavu."
+  too_many_links:
+    one: "Žao nam je, novi korisnici mogu dodati samo jednu poveznicu u objavu."
+    few: "Žao nam je, novi korisnici mogu dodati najviše %{count} poveznica u objavu."
+    other: "Žao nam je, novi korisnici mogu dodati najviše %{count} poveznica u objavu."
+  contains_blocked_word: "Vaša objava sadrži nedozvoljenu riječ: %{word}"
+  contains_blocked_words: "Vaša objava sadrži sljedeće nedozvoljene riječi: %{words}"
   spamming_host: "Žao nam je, ne možete objaviti poveznicu na tog domaćina."
   user_is_suspended: "Suspendiranim korisnicima nije dozvoljeno objavljivanje."
+  not_accepting_pms: "Žao nam je, %{username} trenutno ne prihvaća poruke."
+  pm_reached_recipients_limit: "Žao nam je, ne možete imati više od %{recipients_limit} primatelja u poruci."
   just_posted_that: "je pre slično nečemu što ste nedavno objavili"
   invalid_characters: "sadrži nevažeće znakove"
   is_invalid: "čini se nejasno, jeste li napisali potpunu rečenicu?"
   next_page: "slijedeća stranica →"
   prev_page: "← prethodna stranica"
   page_num: "Stranica %{num}"
+  home_title: "Naslovnica"
   topics_in_category: "Teme u '%{category}' kategoriji."
   rss_posts_in_topic: "RSS kanal '%{topic}'"
   rss_topics_in_category: "RSS kanal tema u '%{category}' kategoriji"
@@ -115,11 +220,37 @@ hr:
   num_posts: "Objave:"
   num_participants: "Sudionika:"
   read_full_topic: "Pročitao cijelu temu"
+  private_message_abbrev: "Poruka"
   rss_description:
     latest: "Posljednje teme"
+    top: "Top teme"
+    top_all: "Top teme svih vremena"
+    top_yearly: "Top teme godine"
+    top_quarterly: "Top teme kvartala"
+    top_monthly: "Top teme mjeseca"
+    top_weekly: "Tjedne top teme"
+    top_daily: "Top teme dana"
+    posts: "Najnovije objave"
+    private_posts: "Najnovije osobne poruke"
+    group_posts: "Najnovije objave grupe %{group_name}"
+    group_mentions: "Najnovije spominjanje od grupe %{group_name}"
+    user_posts: "Najnovije objave @%{username}"
+    user_topics: "Najnovije teme @%{username}"
+    tag: "Tagirane teme"
+    badge: "%{display_name} značka na %{site_title}"
   too_late_to_edit: "Ova je objava stvorena pre davno. Ne može se više izmijenjivati ni brisati."
+  edit_conflict: "Ovu objavu uredio je drugi korisnik i vaše promjene ne mogu biti spremljene."
   excerpt_image: "slika"
   groups:
+    success:
+      bulk_add:
+        one: "%{count} korisnik je dodan u grupu."
+        few: "%{count} korisnika je dodano u grupu."
+        other: "%{count} korisnika je dodano u grupu."
+    errors:
+      grant_trust_level_not_valid: "Razina povjerenja '%{trust_level}' nije važeća."
+      invalid_domain: "'%{domain}' nije važeća domena."
+      invalid_incoming_email: "'%{email}' nije važeća email adresa."
     default_names:
       everyone: "svi"
       admins: "administratori"
@@ -135,6 +266,16 @@ hr:
       one: "%{count} objava"
       few: "%{count} objava"
       other: "%{count} objava"
+    "new-reply": |
+      Dobrodošli na %{site_name} &mdash; **hvala na sudjelovanju u raspravi!**
+
+      - Doprinosi li vaš odgovor raspravi?
+
+      - Budite pristojni prema ostalim članovima.
+
+      - Konstruktivne kritike su dobrodošle, no kritizirajte *ideje*, a ne osobe.
+
+      Za više informacija, [pročitajte smjernice zajednice](%{base_path}/guidelines). Ovaj panel pojavit će se samo na vaših prvih %{education_posts_text} objava.
   activerecord:
     attributes:
       category:
@@ -158,14 +299,33 @@ hr:
           attributes:
             password:
               common: "je jedna od 10000 najčešćih zaporki. Molimo odaberite sigurniju zaporku."
+              same_as_username: "je ista kao vaše korisničko ime. Molimo upotrijebite sigurniju lozinku."
+              same_as_email: "je ista kao vaš email. Molimo upotrijebite sigurniju lozinku."
+              same_as_current: "je ista kao vaša trenutna lozinka."
+              same_as_name: "je ista kao vaše ime."
+              unique_characters: "ima previše ponovljenih znakova. Molimo upotrijebite sigurniju lozinku."
+            username:
+              same_as_password: "je ista kao vaša lozinka."
+            name:
+              same_as_password: "je ista kao vaša lozinka."
             ip_address:
               signup_not_allowed: "Prijava nije dopuštena ovom računu."
         color_scheme_color:
           attributes:
             hex:
               invalid: "nije važeća boja"
+        web_hook:
+          attributes:
+            payload_url:
+              invalid: "URL nije važeći. URL mora sadržavati http:// ili https:// i ne smije imati razmake."
+        topic_timer:
+          attributes:
+            execute_at:
+              in_the_past: "mora biti u budućnosti."
+  uncategorized_category_name: "Nekategorizirano"
   vip_category_name: "Foaje"
   vip_category_description: "Kategorija ekskluzivna članovima koji imaju razinu povjerenja 3 ili više."
+  meta_category_name: "Povratne informacije o stranici"
   meta_category_description: "Rasprave o ovoj stranici, njezinoj organizaciji, kako radi i kako je se može poboljšati."
   staff_category_name: "Osoblje"
   staff_category_description: "Privatna kategorija za rasprave osoblja. Teme su vidljive samo administratorima i moderatorima."
@@ -173,12 +333,15 @@ hr:
     title: "Dobrodošli na Discourse"
   lounge_welcome:
     title: "Dobrodošli u Foaje"
+  admin_quick_start_title: "PROČITATI PRVO: brzi vodič za administratore"
   category:
     topic_prefix: "O %{category} kategoriji"
     errors:
+      not_found: "Kategorija nije pronađena!"
       uncategorized_parent: "Nekategorizirano ne može imati nadkategoriju"
       self_parent: "Kategorija ne može biti sama sebi nadkategorija"
       depth: "Ne možete postaviti podkategoriju pod neku drugu"
+      invalid_email_in: "'%{email}' nije važeća email adresa."
     cannot_delete:
       has_subcategories: "Ne možete obrisati ovu kategoriju jer ima podkategorije"
       topic_exists_no_oldest: "Ne možete obrisati ovu kategoriju jer je broj tema %{count}."
@@ -194,7 +357,18 @@ hr:
     leader:
       title: "vođa"
     change_failed_explanation: "Pokušali ste sanjiti razinu povjerenja %{user_name} na '%{new_trust_level}'. Ali njihova razina povjerenja već jest '%{current_trust_level}'. %{user_name} će ostati na '%{current_trust_level}' - ako želite korisniku smanjiti razinu povjerenja prvo je zaključajte."
+  post:
+    has_likes:
+      one: "%{count} Like"
+      few: "%{count} Likeova"
+      other: "%{count} Likeova"
   rate_limiter:
+    by_type:
+      first_day_replies_per_day: "Napisali ste maksimalan broj odgovora koje novi korisnik može objaviti na prvi dan učlanjenja. Molimo pričekajte %{time_left} prije ponovnog pokušaja."
+      first_day_topics_per_day: "Dosegli ste maksimalan broj novih tema koje novi korisnik može pokrenuti na prvi dan učlanjenja. Molimo pričekajte %{time_left} prije ponovnog pokušaja."
+      create_topic: "Prebrzo pokrećete nove teme. Molimo pričekajte %{time_left} prije ponovnog pokušaja."
+      create_post: "Odgovarate prebrzo. Molimo pričekajte %{time_left} prije ponovnog pokušaja."
+      delete_post: "Prebrzo brišete objave. Molimo pričekajte %{time_left} prije ponovnog pokušaja."
     hours:
       one: "%{count} sat"
       few: "%{count} sati"
@@ -298,21 +472,70 @@ hr:
         few: "prije skoro %{count} godina"
         other: "prije skoro %{count} godina"
   password_reset:
+    choose_new: "Izaberite novu lozinku"
+    choose: "Izaberite lozinku"
     update: "Ažurirajte zaporku"
     save: "Postavite zaporku"
     title: "Ponovo postavite zaporku"
     success: "Uspiješno ste promijenili zaporku i sad ste prijavljeni."
     success_unapproved: "Uspiješno ste promijenili zaporku."
+  email_login:
+    invalid_token: "Žao nam je, ta poveznica za prijavu emailom je prestara. Odaberite gumb 'Prijava' i kliknite na 'Zaboravljena lozinka' kako bi dobili novu poveznicu."
+    title: "Prijava emailom"
+  user_auth_tokens:
+    browser:
+      chrome: "Google Chrome"
+      discoursehub: "DiscourseHub aplikacija"
+      edge: "Microsoft Edge"
+      firefox: "Firefox"
+      ie: "Internet Explorer"
+      opera: "Opera"
+      safari: "Safari"
+      unknown: "nepoznati preglednik"
+    device:
+      android: "Android uređaj"
+      chromebook: "Chromebook"
+      ipad: "iPad"
+      iphone: "iPhone"
+      ipod: "iPod"
+      linux: "GNU/Linux računalo"
+      mac: "Mac"
+      mobile: "Mobilni uređaj"
+      windows: "Windows računalo"
+      unknown: "nepoznati uređaj"
+    os:
+      android: "Android"
+      chromeos: "ChromeOS"
+      ios: "iOS"
+      linux: "Linux"
+      macos: "macOS"
+      windows: "Microsoft Windows"
+      unknown: "nepoznati operacijski sustav"
   change_email:
     confirmed: "Email vam je ažuriran."
     please_continue: "Nastavite na %{site_name}"
     error: "Dogodila se greška u promijeni tvog e-maila. Možda se ta adresa već koristi?"
+    error_staged: "Dogodila se greška pri promjeni vaše email adrese. Adresu već koristi drugi korisnik."
+    already_done: "Žao nam je, ova poveznica za potvrdu nije više važeća. Možda je vaš email već promijenjen?"
+    authorizing_old:
+      title: "Hvala što ste potvrdili vašu trenutnu email adresu."
+      description: "Šaljemo poruku potvrde na vašu novu email adresu."
+  associated_accounts:
+    connected: "(povezano)"
   activation:
+    action: "Kliknite ovdje kako bi aktivirali vaš korisnički račun"
     already_done: "Žao nam je, poveznica za aktivaciju računa više nije važeća. Možda vam je račun već aktivan?"
     please_continue: "Vaš novi račun je potvrđen, biti će te preusmjereni na glavnu stranicu."
     continue_button: "Nastavite na %{site_name}"
     welcome_to: "Dobrodošli na %{site_name}"
     approval_required: "Moderator vam mora ručno odobriti račun da bi mogli pristupiti ovom forumu. Dobiti će te email kad vam račun bude odobren!"
+    missing_session: "Ne možemo utvrditi je li vaš korisnički račun kreiran, molimo osigurajte da su vam omogućeni cookieji (kolačići)."
+    activated: "Žao nam je, ovaj korisnički račun je već aktiviran."
+    admin_confirm:
+      title: "Potvrdite račun administratora."
+      grant: "Dozvolite administratorski pristup"
+      complete: "<b>%{target_username}</b> je sada administrator."
+      back_to: "Vratite se na %{title}"
   reviewable_score_types:
     needs_approval:
       title: "Potrebna potvrda"
@@ -320,15 +543,20 @@ hr:
     off_topic:
       title: "Van teme"
       description: "Ova objava nije relevantna za trenutnu raspravu opisanu naslovom i prvom objavom, Vjerovatno ju se treba premjestiti."
+      short_description: "Nije bitno za raspravu"
       long_form: "označi ovo kao van teme"
     spam:
       title: "Nepoželjno"
+      description: "Ova objava je oglas ili vandalizam. Nije korisna ili bitna za trenutnu temu."
+      short_description: "Ovo je oglas ili vandalizam."
       long_form: "označio kao nepoželjno"
+      email_title: '"%{title}" je označeno kao spam'
       email_body: "%{link}\n\n%{message}"
     inappropriate:
       title: "Neprikladno"
       long_form: "označio ovo kao neprikladno"
     notify_user:
+      title: "Pošaljite poruku @{{username}}"
       email_title: 'Vaša objava u "%{title}"'
       email_body: "%{link}\n\n%{message}"
     notify_moderators:
@@ -344,11 +572,27 @@ hr:
       description: "Like-aj objavu"
       short_description: "Like-aj objavu"
       long_form: "like-ao objavu"
+  user_activity:
+    no_default:
+      self: "Još nemate zabilježenih aktivnosti."
+      others: "Nema aktivnosti."
+    no_bookmarks:
+      self: "Nemate označenih objava; oznake vam omogućuju brzo referenciranje na specifične objave."
+      others: "Nema oznaka."
+    no_likes_given:
+      self: "Niste likeali niti jednu objavu."
+      others: "Nema likeanih objava."
+    no_replies:
+      self: "Niste odgovorili ni na jednu objavu."
+      others: "Nema odgovora."
+    no_drafts:
+      self: "Nemate skica objava; započnite pisanje odgovora na bilo koju temu i ona će automatski biti spremljena kao skica."
   topic_flag_types:
     spam:
       title: "Nepoželjno"
       description: "Ova tema je reklama. Nije korisno niti relevantno ovoj stranici već služi u promotivne svrhe."
       long_form: "označio kao nepoželjno"
+      short_description: "Ovo je oglas"
     inappropriate:
       title: "Neprikladno"
       long_form: "označio ovo kao neprikladno"
@@ -368,7 +612,11 @@ hr:
         make: "Ova tema je sada \"banner\". Pojaviti će se na vrhu svake stranice dok ju korisnik ne odbaci."
         remove: "Ova tema više nije \"banner\". Neće se više prikazivati na vrhu svake stranice."
   unsubscribe:
+    title: "Odjava"
+    stop_watching_topic: "Prestanite pratiti ovu temu, %{link}"
+    mute_topic: "Prigušite sve obavijesti za ovu temu, %{link}"
     log_out: "Odjava"
+    submit: "Spremite postavke"
     digest_frequency:
       never: "nikad"
       every_30_minutes: "svakih 30 minuta"
@@ -499,6 +747,7 @@ hr:
         num_clicks: "Klikova"
         topic: "Teme"
     page_view_anon_reqs:
+      title: "Anonimno"
       xaxis: "Dan"
     page_view_logged_in_reqs:
       xaxis: "Dan"
@@ -554,8 +803,11 @@ hr:
     queue_size_warning: "Broj predbilježenih zadataka je %{queue_size}, što je velik broj. Ovo može biti pokazatelj problema za Sidekiq procesom(ima), ili trebate dodati još Sidekiq \"radnika\"."
     memory_warning: "Server vam radi s manje od 1 GB ukupne memorije. Barem 1 GB se preporuča."
   site_settings:
+    version_checks: "Pingaj Discourse Hub za dostupna ažuriranja i prikaži obavijesti o novim verzijama na <a href='%{base_path}/admin' target='_blank'>/admin</a> nadzornoj ploči"
     emoji_set: "Kakave emoji-e želite?"
     company_name: "Ime tvrtke"
+    errors:
+      invalid_string_max: "Ne smije imati više od %{max} znakova."
   search:
     types:
       category: "Kategorije"
@@ -567,15 +819,29 @@ hr:
   admin:
     email:
       sent_test: "poslano!"
+  user:
+    username:
+      long: "ne smije imati više od %{max} znakova"
+      must_not_contain_two_special_chars_in_seq: "ne smije sadržavati niz od 2 ili više specijalna znaka (.-_)"
   system_messages:
     welcome_user:
       subject_template: "Dobrodošli na %{site_name}"
     welcome_invite:
       subject_template: "Dobrodošli na %{site_name}"
+    dashboard_problems:
+      title: "Problemi nadzorne ploče"
+      subject_template: "Novi savjeti na vašoj nadzornoj ploči"
+      text_body_template: |
+        Imamo nove savjete i preporuke za vas temeljene na trenutnim postavkama stranice.
+
+        [Otvorite nadzornu ploču](%{base_url}/admin) kako bi ih pregledali.
   user_notifications:
+    unsubscribe:
+      title: "Odjava"
     digest:
       liked_received: "Like-ova primljeno"
       new_users: "Novi korisnici"
+      join_the_discussion: "Pročitaj više"
     forgot_password:
       title: "Zaboravljena zaporka"
     set_password:
@@ -586,10 +852,10 @@ hr:
     search_button: "Pretraži"
   login_required:
     welcome_message: |
-      ##[Dobrodošli na %{title}] (#welcome)
+      ## [Dobrodošli na %{title}](#welcome)
       Nužno je prijaviti se korisničkim računom. Molimo učlanite se ili prijavite za nastavak.
     welcome_message_invite_only: |
-      [Dobrodošli na %{title}] (#welcome)
+      ## [Dobrodošli na %{title}] (#welcome)
       Nužno je prijaviti se korisničkim računom. Molimo upitajte postojećeg korisnika za pozivnicu ili se prijavite za nastavak.
   image: "slika"
   csv_export:
@@ -651,6 +917,7 @@ hr:
       name: Pročitao smjernice
     reader:
       name: Čitatelj
+    badge_title_metadata: "%{display_name} značka na %{site_title}"
   wizard:
     step:
       forum_title:

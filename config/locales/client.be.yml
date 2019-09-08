@@ -192,6 +192,8 @@ be:
       title:
         placeholder: "увядзіце назву тэмы"
     review:
+      explain:
+        total: "агульны"
       delete: "Выдаліць"
       settings:
         save_changes: "Захаваць"
@@ -772,7 +774,6 @@ be:
         create_topic:
           label: "пачаць новую тэму"
     notifications:
-      more: "перагледзець старыя абвесткі"
       popup:
         confirm_title: "Апавяшчэння ўключаная -% {SITE_TITLE}"
         confirm_body: "Поспех! Паведамлення былі ўключаны."

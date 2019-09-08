@@ -314,6 +314,8 @@ fr:
     review:
       order_by: "Trier par"
       in_reply_to: "en réponse à"
+      explain:
+        total: "Total"
       claim_help:
         optional: "Vous pouvez réserver cet élément pour empêcher d'autres de le vérifier."
         required: "Vous devez réserver des éléments avant des les vérifier."
@@ -1560,7 +1562,6 @@ fr:
       title: "notifications des mentions de votre @pseudo, des réponses à vos messages, à vos sujets, etc."
       none: "Impossible de charger les notifications pour le moment."
       empty: "Aucune notification trouvée."
-      more: "voir les anciennes notifications"
       post_approved: "Votre message a été approuvé"
       reviewable_items: "éléments en attente de vérification"
       mentioned: "<span>{{username}}</span> {{description}}"
@@ -1718,6 +1719,7 @@ fr:
     go_back: "retour"
     not_logged_in_user: "page utilisateur avec un résumé de l'activité et les préférences "
     current_user: "aller à votre page utilisateur"
+    view_all: "Tout voir"
     topics:
       new_messages_marker: "dernière visite"
       bulk:
